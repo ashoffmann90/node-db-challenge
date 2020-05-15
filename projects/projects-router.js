@@ -11,3 +11,5 @@ router.get('/', (req, res) => {
         res.status(500).json({error: "Could not find projects"})
     })
 })
+
+module.exports = router

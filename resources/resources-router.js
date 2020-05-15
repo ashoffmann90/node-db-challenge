@@ -1,9 +1,9 @@
 const express = require('express')
-const Projects = require('./projects-module')
+const Resources = require('./resources-module')
 const router = express.Router()
 
 router.get('/', (req, res) => {
-    Projects.getProjects()
+    Resources.getResources()
     .then(projects => {
         res.json(projects)
     })
@@ -13,12 +13,12 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-    Projects.addProject(req.body)
-    .then(project => {
-        res.json(project)
+    Resources.addResource(req.body)
+    .then(resource => {
+        res.json(resource)
     })
     .catch(er => {
-        res.status(500).json({error: 'Could not add project'})
+        res.status(500).json({error: 'Could not add resource'})
     })
 })
 

@@ -12,6 +12,17 @@ router.get('/', (req, res) => {
     })
 })
 
+// router.get('/:id', (req, res) => {
+//     const id = req.params.id
+//     Projects.getProjectById(id)
+//     .then(project => {
+//         res.json(project)
+//     })
+//     .catch(er => {
+//         res.status(500).json({ error: 'Could not get project'})
+//     })
+// })
+
 router.post('/', (req, res) => {
     Projects.addProject(req.body)
     .then(project => {

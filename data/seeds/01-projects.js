@@ -19,6 +19,11 @@ exports.seed = function(knex) {
           project_name: "Steal Grandma's super secret cookie recipe",
           project_description: "*Mission Impossible Theme Song*",
           completed: false
+        },
+        {
+          project_name: "FREAK OUT",
+          project_description: "*DISCO*",
+          completed: false
         }
       ]);
     });
